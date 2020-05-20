@@ -42,4 +42,12 @@ public class TreeNode {
     public String toString() {
         return String.valueOf(data);
     }
+    
+    public static TreeNode getDefaultTree() {
+        return new TreeNode(
+                1, new TreeNode(2, new TreeNode(4, null, null), new TreeNode(5, null, null)),
+                new TreeNode(3, new TreeNode(6, null, null), new TreeNode(7, null, null))
+        );
+
+    }
 }
