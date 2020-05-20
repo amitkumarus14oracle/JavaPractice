@@ -65,7 +65,7 @@ public class GraphImpl {
         g.dfs();
     }
 
-    private static GraphImpl getDefaultGraph() {
+    public static GraphImpl getDefaultGraph() {
         GraphImpl g = new GraphImpl();
         g.addVertex('A');
         g.addVertex('B');
