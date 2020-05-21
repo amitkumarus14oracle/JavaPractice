@@ -2,14 +2,14 @@ package daily.five.data.structure.questions;
 
 import java.util.Stack;
 
-public class GraphImpl {
+public class CreateGraph {
     private final int MAX_VERTEX_COUNT = 20;
     private int adjMatrix[][];
     private Vertex[] vertices;
     private Stack<Integer> stack;
     private int vertexCount;
 
-    public GraphImpl() {
+    public CreateGraph() {
         vertices = new Vertex[MAX_VERTEX_COUNT];
         adjMatrix = new int[MAX_VERTEX_COUNT][MAX_VERTEX_COUNT];
         stack = new Stack<>();
@@ -32,24 +32,6 @@ public class GraphImpl {
         System.out.println(vertices[v].getLabel());
     }
 
-    public void dfs() {
-        vertices[0].setVisited(true);
-        displayVertex(0);
-        stack.push(0);
-        while(!stack.isEmpty()) {
-            int v = getAdjacentVertex(stack.peek());
-            if(v == -1){
-                stack.pop();
-            } else {
-                vertices[v].setVisited(true);
-                displayVertex(v);
-                stack.push(v);
-            }
-        }
-        for (int i =0 ;i<vertexCount; i++) {
-            vertices[i].setVisited(false);
-        }
-    }
 
     public int getAdjacentVertex(int v) {
         for(int i=0; i<adjMatrix.length; i++) {
@@ -61,12 +43,11 @@ public class GraphImpl {
     }
 
     public static void main(String[] args) {
-        GraphImpl g = getDefaultGraph();
-        g.dfs();
+        CreateGraph g = getDefaultGraph();
     }
 
-    public static GraphImpl getDefaultGraph() {
-        GraphImpl g = new GraphImpl();
+    public static CreateGraph getDefaultGraph() {
+        CreateGraph g = new CreateGraph();
         g.addVertex('A');
         g.addVertex('B');
         g.addVertex('C');
