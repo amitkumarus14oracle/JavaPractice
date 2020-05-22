@@ -9,6 +9,30 @@ public class CreateGraph {
     private Stack<Integer> stack;
     private int vertexCount;
 
+    public int[][] getAdjMatrix() {
+        return adjMatrix;
+    }
+
+    public void setAdjMatrix(int[][] adjMatrix) {
+        this.adjMatrix = adjMatrix;
+    }
+
+    public void setVertexVisit(Vertex vertex, boolean visited) {
+        vertex.setVisited(visited);
+    }
+
+    public char getVertexLabel(Vertex vertex) {
+        return vertex.getLabel();
+    }
+
+    public Vertex[] getVertices() {
+        return vertices;
+    }
+
+    public void setVertices(Vertex[] vertices) {
+        this.vertices = vertices;
+    }
+
     public CreateGraph() {
         vertices = new Vertex[MAX_VERTEX_COUNT];
         adjMatrix = new int[MAX_VERTEX_COUNT][MAX_VERTEX_COUNT];
@@ -22,7 +46,7 @@ public class CreateGraph {
 
     public void addEdge(int src, int dest) {
         adjMatrix[src][dest] = 1;
-        adjMatrix[dest][src] = 1;
+       // adjMatrix[dest][src] = 1; // uncomment this in case of undirected graph
     }
 
     public void displayVertex(Vertex v) {
@@ -44,6 +68,10 @@ public class CreateGraph {
 
     public static void main(String[] args) {
         CreateGraph g = getDefaultGraph();
+    }
+
+    public int getVertexCount() {
+        return vertexCount;
     }
 
     public static CreateGraph getDefaultGraph() {
