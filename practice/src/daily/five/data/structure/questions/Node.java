@@ -1,5 +1,7 @@
 package daily.five.data.structure.questions;
 
+import java.util.HashSet;
+
 public class Node {
     private int data;
     private Node next;
@@ -37,6 +39,18 @@ public class Node {
         while(n != null) {
             System.out.print(n + "\t");
             n = n.getNext();
+        }
+    }
+
+    public static void printCircularNodeList(Node n) {
+        HashSet<Integer> h = new HashSet<>();
+        while(n != null) {
+            if(!h.add(n.hashCode())) {
+                n = null;
+            } else {
+                System.out.print(n + "\t");
+                n = n.getNext();
+            }
         }
     }
     
