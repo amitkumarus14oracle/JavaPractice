@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-public class MyTest {
+public class MapIteration {
     public static void main(String[] args) {
         HashMap<String, String> h = new HashMap<>();
         h.put("amit", "amit1");
