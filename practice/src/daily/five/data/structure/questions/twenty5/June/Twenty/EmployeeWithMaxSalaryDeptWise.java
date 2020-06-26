@@ -13,7 +13,7 @@ import java.io.*;
    standard library */
 
 /* Do not add a namespace declaration */
-public class Main {
+public class EmployeeWithMaxSalaryDeptWise {
     public static Map<String,Integer> processData(ArrayList<String> array) {
         /* 
          * Modify this method to process `array` as indicated
@@ -73,9 +73,4 @@ public class Main {
             System.out.println("IO error in input.txt or output.txt");
         }
     }
-}
-class EmpSal {
-    int sal;
-    int empId;
-
 }
