@@ -1,4 +1,4 @@
-package daily.five.data.structure.questions.twenty5.may.twenty;
+package daily.five.data.structure.questions.twenty5.June.Twenty;
 
 import java.util.HashMap;
 import java.util.Iterator;
