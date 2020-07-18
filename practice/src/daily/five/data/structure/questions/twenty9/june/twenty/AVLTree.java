@@ -4,6 +4,7 @@ public class AVLTree {
     public static void main(String[] args) {
         AVLTreeNode root = new AVLTreeNode(3);
 
+
     }
 
     public AVLTreeNode insert(AVLTreeNode root, AVLTreeNode node) {
